@@ -2,7 +2,6 @@ package database_operation;
 
 import bean.Student;
 
-import java.rmi.StubNotFoundException;
 import java.sql.*;
 import java.util.Objects;
 
