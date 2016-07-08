@@ -12,8 +12,6 @@ import java.util.Objects;
 public class Operation {
 
     private Connection connection = null;
-    private final String SUCCESSFULLY_LOGIN="CORRECT";
-    private final String INCORRECT_PASSWORD="INCORRECT";
 
     //加载数据库的方法
     private void loadDatabase(){
@@ -87,10 +85,10 @@ public class Operation {
                 if (Objects.equals(temp_id, id)){
                     if (password.equals(temp_password)){
                         close();
-                        return SUCCESSFULLY_LOGIN;
+                        return "CORRECT";
                     }
                     close();
-                    return INCORRECT_PASSWORD;
+                    return "INCORRECT";
                 }
             }
         }catch (Exception e){

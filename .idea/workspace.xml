@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91f8a079-5db7-45b5-9243-ae265cb6a7ae" name="Default" comment="增加了详细的注释">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Servlet/AdminLoginServlet.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Servlet/AdminLoginServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Servlet/LoginServlet.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Servlet/LoginServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Servlet/LogoutServlet.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Servlet/LogoutServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Servlet/RegisterServlet.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Servlet/RegisterServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/bean/Student.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/bean/Student.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/database_operation/Operation.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/database_operation/Operation.class" />
+    <list default="true" id="91f8a079-5db7-45b5-9243-ae265cb6a7ae" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlet/AdminLoginServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/AdminLoginServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlet/LoginServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/LoginServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database_operation/Operation.java" afterPath="$PROJECT_DIR$/src/database_operation/Operation.java" />
     </list>
     <ignored path="Project2.iws" />
@@ -86,13 +78,12 @@
       <file leaf-file-name="Operation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/database_operation/Operation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+            <state relative-caret-position="558">
+              <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
               <folding>
                 <element signature="method#loadDatabase#0;class#Operation#0" expanded="false" />
                 <element signature="method#exec#0;class#Operation#0" expanded="false" />
                 <element signature="method#close#0;class#Operation#0" expanded="false" />
-                <element signature="method#checkUser#0;class#Operation#0" expanded="false" />
                 <element signature="method#select#0;class#Operation#0" expanded="false" />
               </folding>
             </state>
@@ -316,6 +307,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database_operation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project2_cloned" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project2_cloned" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bean" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -955,7 +968,7 @@
       <workItem from="1467966089730" duration="938000" />
       <workItem from="1467967462240" duration="3328000" />
       <workItem from="1467979875622" duration="1267000" />
-      <workItem from="1467983576253" duration="9189000" />
+      <workItem from="1467983576253" duration="9278000" />
     </task>
     <task id="LOCAL-00001" summary="recover the project">
       <created>1467963173799</created>
@@ -978,11 +991,18 @@
       <option name="project" value="LOCAL" />
       <updated>1467995975566</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="合并简化了检查学生和管理员ID和密码的方法">
+      <created>1467997226402</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1467997226402</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87498000" />
+    <option name="totallyTimeSpent" value="87587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1402" extended-state="6" />
@@ -1063,7 +1083,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="recover the project" />
     <MESSAGE value="增加了详细的注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了详细的注释" />
+    <MESSAGE value="合并简化了检查学生和管理员ID和密码的方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="合并简化了检查学生和管理员ID和密码的方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1094,7 +1115,6 @@
             <element signature="method#loadDatabase#0;class#Operation#0" expanded="false" />
             <element signature="method#exec#0;class#Operation#0" expanded="false" />
             <element signature="method#close#0;class#Operation#0" expanded="false" />
-            <element signature="method#checkUser#0;class#Operation#0" expanded="false" />
             <element signature="method#select#0;class#Operation#0" expanded="false" />
           </folding>
         </state>
@@ -1135,7 +1155,6 @@
             <element signature="method#loadDatabase#0;class#Operation#0" expanded="false" />
             <element signature="method#exec#0;class#Operation#0" expanded="false" />
             <element signature="method#close#0;class#Operation#0" expanded="false" />
-            <element signature="method#checkUser#0;class#Operation#0" expanded="false" />
             <element signature="method#select#0;class#Operation#0" expanded="false" />
           </folding>
         </state>
@@ -1176,7 +1195,6 @@
             <element signature="method#loadDatabase#0;class#Operation#0" expanded="false" />
             <element signature="method#exec#0;class#Operation#0" expanded="false" />
             <element signature="method#close#0;class#Operation#0" expanded="false" />
-            <element signature="method#checkUser#0;class#Operation#0" expanded="false" />
             <element signature="method#select#0;class#Operation#0" expanded="false" />
           </folding>
         </state>
@@ -1426,13 +1444,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database_operation/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+        <state relative-caret-position="558">
+          <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
           <folding>
             <element signature="method#loadDatabase#0;class#Operation#0" expanded="false" />
             <element signature="method#exec#0;class#Operation#0" expanded="false" />
             <element signature="method#close#0;class#Operation#0" expanded="false" />
-            <element signature="method#checkUser#0;class#Operation#0" expanded="false" />
             <element signature="method#select#0;class#Operation#0" expanded="false" />
           </folding>
         </state>
