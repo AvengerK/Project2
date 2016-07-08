@@ -15,6 +15,7 @@ public class Operation {
     private final String SUCCESSFULLY_LOGIN="CORRECT";
     private final String INCORRECT_PASSWORD="INCORRECT";
 
+    //加载数据库的方法
     private void loadDatabase(){
 
         try {
@@ -30,6 +31,7 @@ public class Operation {
         }
     }
 
+    //数据库操作方法，返回结果集。参数为操作语句，可选参数为数据库项目
     public ResultSet exec(String sql,Object... args){
         try {
             loadDatabase();
@@ -45,6 +47,7 @@ public class Operation {
         }
     }
 
+    //关闭数据库方法
     private void close(){
         if (connection!=null){
             try {
@@ -55,6 +58,7 @@ public class Operation {
         }
     }
 
+    //检查ID和密码是否正确，返回字符串
     public String checkUser(String id, String password){
 
         ResultSet resultSet;
@@ -86,6 +90,7 @@ public class Operation {
         return "NO SUCH USER";
     }
 
+    //检查管理员ID和密码是否输入正确
     public String checkAdmin(String admin_id,String password){
         ResultSet resultSet;
         try {
@@ -116,6 +121,7 @@ public class Operation {
         return "NO SUCH ADMIN";
     }
 
+    //选择方法，返回符合条件的一个学生对象
     public Student select(String tableName,String key,String value) throws SQLException{
         Student student=new Student();
         ResultSet resultSet=exec("SELECT * FROM "+tableName+" WHERE "+key+"="+value);

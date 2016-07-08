@@ -3,6 +3,7 @@ package bean;
 /**
  * Created by hou on 2016/7/4.
  */
+//学生类，用作bean
 public class Student {
 
     private String name;

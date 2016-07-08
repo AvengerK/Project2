@@ -11,12 +11,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="student" class="bean.Student"/>
 <jsp:setProperty name="student" property="*"/>
+
+<%--注册页面--%>
 <html>
 <head>
     <title>REGISTER</title>
 </head>
 <body>
     <h1 align="center">注册</h1>
+    <%--注册填写表单：学生姓名，学号，密码--%>
+    <%--表单信息提交到registerServlet处理--%>
     <form action="${pageContext.request.contextPath}/Servlet.RegisterServlet" method="post">
         Name:
         <input type="text" name="name"/><br>

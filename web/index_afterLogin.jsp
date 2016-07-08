@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%--登录后的主页的样子，跟登录前的主页几乎完全一致，但是分为两个页面，因为不知道如何在同一个页面改变显示状态……--%>
+<%--比如说在主页去掉登录和注册按钮而显示学生的姓名。所以退而求其次。--%>
+<%--和登录前的主页的不同在于，这一“主页”的报名按钮是可用的。而右上角不显示登录注册按钮，转而显示注销按钮和学生姓名--%>
 <html>
 <head>
     <title>Home Page</title>
@@ -18,14 +22,10 @@
 </head>
 <body>
 <%
-//    String name = (String) request.getSession().getAttribute("student");
+    //从session中获取登录成功后存在session中的student对象
     Student student = (Student)session.getAttribute("student");
+    //定义字符串name为学生的姓名
     String name = student.getName();
-//    if (student!=null){
-//        System.out.println("student in afterLogin not null");
-//    }else{
-//        System.out.println("student in afterLogin null");
-//    }
 %>
 <!-- Simple header with fixed tabs. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
@@ -36,9 +36,12 @@
             <span class="mdl-layout-title">创新实验班</span>
             <div class="mdl-layout-spacer"></div>
             <nav class="mdl-navigation">
+                <%--不显示登录注册按钮，显示一条带有学生姓名的欢迎信息和一个注销按钮--%>
+
                 <%--<a class="mdl-navigation__link" href="register.jsp">注册</a>--%>
                 <%--<a class="mdl-navigation__link" href="login.jsp">登录</a>--%>
                     <span class="mdl-layout-title"><%=name%>,WELCOME!</span>
+                    <%--注销操作由servlet实现--%>
                     <a class="mdl-navigation__link" href="${pageContext.request.contextPath}/Servlet.LogoutServlet">注销</a>
 
             </nav>
@@ -53,6 +56,8 @@
     <%--<div class="mdl-layout__drawer">--%>
     <%--<span class="mdl-layout-title">Title</span>--%>
     <%--</div>--%>
+
+    <%--报名按钮可用--%>
     <main class="mdl-layout__content">
         <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
             <div class="page-content"><!-- Your content goes here -->

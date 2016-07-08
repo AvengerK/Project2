@@ -9,6 +9,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%--登陆前的主页--%>
 <html>
   <head>
     <title>Home Page</title>
@@ -24,9 +26,8 @@
   <!-- Simple header with fixed tabs. -->
   <%
       Student student=(Student) session.getAttribute("student");
+      //检测session中的student对象，如果存在表示已经登录，转发到登录后的界面。
       if (student!=null){
-//          System.out.println("student in index.jsp not null");
-//          request.setAttribute("student",student);
           request.getRequestDispatcher("index_afterLogin.jsp").forward(request,response);
       }
 
@@ -39,8 +40,11 @@
         <span class="mdl-layout-title">创新实验班</span>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
+            <%--注册按钮--%>
           <a name="set" class="mdl-navigation__link" href="register.jsp">注册</a>
+            <%--登录按钮--%>
           <a name="set" class="mdl-navigation__link" href="login.jsp">登录</a>
+
         </nav>
       </div>
       <!-- Tabs -->
@@ -50,15 +54,14 @@
         <a href="#fixed-tab-3" class="mdl-layout__tab">图像处理</a>
       </div>
     </header>
-    <%--<div class="mdl-layout__drawer">--%>
-      <%--<span class="mdl-layout-title">Title</span>--%>
-    <%--</div>--%>
+
     <main class="mdl-layout__content">
+        <%--登录前的主页，报名按钮将不可用--%>
       <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
         <div class="page-content"><!-- Your content goes here -->
             This is JAVA WEB Class.
           <!-- Colored FAB button with ripple -->
-          <button onclick="alert('please login');" disabled="disabled" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+          <button disabled="disabled" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
             <i class="material-icons">add</i>
           </button>
         </div>
@@ -81,6 +84,5 @@
       </section>
     </main>
   </div>
-  <%--<input type="button" onclick="window.location.href='adminLogin.jsp';" value="admin">--%>
   </body>
 </html>

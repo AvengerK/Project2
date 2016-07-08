@@ -21,18 +21,23 @@ public class AdminLoginServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //从表单获取输入的管理员ID和密码，获取页面输出对象
         String admin_id=request.getParameter("admin_id");
         String password=request.getParameter("password");
         PrintWriter out=response.getWriter();
 
+        //new一个数据库操作类
         Operation operation=new Operation();
+        //检查ID和密码正确与否
         String result=operation.checkAdmin(admin_id,password);
         switch (result){
             case "CORRECT":
+                //如果正确则进入后台管理页面（尚未设计）
                 System.out.println("correct");
                 response.sendRedirect("background.jsp");
                 break;
             case "INCORRECT":
+                //密码不正确，alert警告，退回管理员登录界面
                 System.out.println("incorrect");
                 out.flush();
                 out.println("<script type=\"text/javascript\">");
@@ -41,6 +46,7 @@ public class AdminLoginServlet extends HttpServlet {
                 out.println("</script>");
                 break;
             case "NO SUCH ADMIN":
+                //管理员用户不存在，alert警告，退回管理员登录界面
                 System.out.println("no such admin");
                 out.flush();
                 out.println("<script type=\"text/javascript\">");
