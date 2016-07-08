@@ -59,20 +59,30 @@ public class Operation {
     }
 
     //检查ID和密码是否正确，返回字符串
-    public String checkUser(String id, String password){
+    public String checkUser(String tableName,String id, String password){
 
         ResultSet resultSet;
         try {
-            resultSet=exec("SELECT * FROM student_signup");
+            resultSet=exec("SELECT * FROM"+tableName);
         }catch (Exception e){
             e.printStackTrace();
             close();
             return null;
         }
 
+        String temp_id=null;
+        try {
+            if (tableName.equals("student_signup")) {
+                temp_id = resultSet.getString("student_id");
+            }else if (tableName.equals("admin")){
+                temp_id = resultSet.getString("admin_id");
+            }
+        }catch (SQLException sqlexception){
+            sqlexception.printStackTrace();
+        }
         try {
             while (resultSet.next()){
-                String temp_id = resultSet.getString("student_id");
+
                 String temp_password=resultSet.getString("password").trim();
                 if (Objects.equals(temp_id, id)){
                     if (password.equals(temp_password)){
@@ -88,37 +98,6 @@ public class Operation {
         }
         close();
         return "NO SUCH USER";
-    }
-
-    //检查管理员ID和密码是否输入正确
-    public String checkAdmin(String admin_id,String password){
-        ResultSet resultSet;
-        try {
-            resultSet=exec("SELECT * FROM admin");
-        }catch (Exception e){
-            e.printStackTrace();
-            close();
-            return null;
-        }
-
-        try {
-            while (resultSet.next()){
-                String temp_admin_id=resultSet.getString("admin_id");
-                String temp_password=resultSet.getString("password");
-                if (admin_id.equals(temp_admin_id)){
-                    if (password.equals(temp_password)){
-                        close();
-                        return SUCCESSFULLY_LOGIN;
-                    }
-                    close();
-                    return INCORRECT_PASSWORD;
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        close();
-        return "NO SUCH ADMIN";
     }
 
     //选择方法，返回符合条件的一个学生对象

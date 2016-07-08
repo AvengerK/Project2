@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
         //new一个数据库操作类的对象
         Operation operation=new Operation();
         //利用对象的checkUser方法检查学号密码是否正确
-        String result=operation.checkUser(student_id,password);
+        String result=operation.checkUser("student_signup",student_id,password);
         switch (result) {
             case "CORRECT":
                 System.out.println("correct");

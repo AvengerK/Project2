@@ -29,7 +29,7 @@ public class AdminLoginServlet extends HttpServlet {
         //new一个数据库操作类
         Operation operation=new Operation();
         //检查ID和密码正确与否
-        String result=operation.checkAdmin(admin_id,password);
+        String result=operation.checkUser("admin",admin_id,password);
         switch (result){
             case "CORRECT":
                 //如果正确则进入后台管理页面（尚未设计）
@@ -45,7 +45,7 @@ public class AdminLoginServlet extends HttpServlet {
                 out.println("history.back();");
                 out.println("</script>");
                 break;
-            case "NO SUCH ADMIN":
+            case "NO SUCH USER":
                 //管理员用户不存在，alert警告，退回管理员登录界面
                 System.out.println("no such admin");
                 out.flush();
