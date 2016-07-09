@@ -12,6 +12,9 @@
     <title>Administration</title>
 </head>
 <body>
-    管理员后台管理页面
+    <form method="post" name="editInfo" action="">
+        <textarea rows="3" cols="20"></textarea>
+        <input type="submit" value="submit" name="submit">
+    </form>
 </body>
 </html>

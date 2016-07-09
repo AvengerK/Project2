@@ -1,4 +1,5 @@
-<%@ page import="bean.Student" %><%--
+<%@ page import="bean.Student" %>
+<%@ page import="database_operation.Operation" %><%--
   Created by IntelliJ IDEA.
   User: hou
   Date: 2016/7/7
@@ -64,7 +65,12 @@
                 JAVA WEB实验班
                 <!-- Colored FAB button with ripple -->
                 <form>
-                <button name="class_select" value="1" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <button name="class_select" value="1" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                        onclick="<%Operation p1 = new Operation();
+                    if(!(p1).is_chosen(student.getStudent_id()))
+                        {
+                            p1.choose(student.getStudent_id(),1);
+                        }else{%> alert('已经报过名了！');<%}%>">
                     <i class="material-icons">add</i>
                 </button>
                     <%--<input type="button" name="class_select" value="1" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">--%>
@@ -75,7 +81,12 @@
             <div class="page-content"><!-- Your content goes here -->
                 嵌入式实验班
                 <form>
-                <button name="class_select" value="2" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <button name="class_select" value="2" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                        onclick="<%Operation p2 = new Operation();
+                    if(!(p2).is_chosen(student.getStudent_id()))
+                        {
+                            p2.choose(student.getStudent_id(),2);
+                        }else{%> alert('已经报过名了！');<%}%>">
                     <i class="material-icons">add</i>
                 </button>
                 </form>
@@ -85,7 +96,12 @@
             <div class="page-content"><!-- Your content goes here -->
                 图像处理实验班
                 <form>
-                <button name="class_select" value="3" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <button name="class_select" value="3" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                        onclick="<%Operation p3 = new Operation();
+                    if(!(p3).is_chosen(student.getStudent_id()))
+                        {
+                            p3.choose(student.getStudent_id(),3);
+                        }else {%> alert('已经报过名了！')<%}%>">
                     <i class="material-icons">add</i>
                 </button>
                 </form>

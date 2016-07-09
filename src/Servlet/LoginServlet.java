@@ -40,13 +40,10 @@ public class LoginServlet extends HttpServlet {
                 System.out.println("correct");
                 try {
                     //如果正确，利用操作类对象的select方法返回一个学生对象，存储到session
-                    //利用Cookie保持登录的问题需要解决（不必要）
                     Student student = operation.select("student_signup", "student_id", student_id);
                     if (student != null) {
                         HttpSession session = request.getSession();
                         session.setAttribute("student", student);
-//                        response.addCookie(new Cookie("student_id", student_id));
-//                        response.addCookie(new Cookie("password", password));
                     }
                 }catch (SQLException sqlexception){
                     sqlexception.printStackTrace();
@@ -62,7 +59,7 @@ public class LoginServlet extends HttpServlet {
                 //如果密码错误，向页面输出javascript代码，alert提示密码错误，返回登录界面
                 out.flush();
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert(\"incorrect password!\");");
+                out.println("alert(\"密码错误!\");");
                 out.println("history.back();");
                 out.println("</script>");
                 break;
@@ -71,7 +68,7 @@ public class LoginServlet extends HttpServlet {
                 //如果数据库中没有此学号，向页面输出javascript代码，alert提示没有此用户。返回登录界面
                 out.flush();
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert(\"no such user!\");");
+                out.println("alert(\"没有该用户!\");");
                 out.println("history.back();");
                 out.println("</script>");
                 break;

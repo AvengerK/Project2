@@ -31,7 +31,7 @@ public class RegisterServlet extends HttpServlet {
         String student_id = request.getParameter("student_id");
 
         //声明一个resultSet结果集和student对象和一个页面输出对象
-        ResultSet resultSet;
+        //ResultSet resultSet;
         Student student;
         PrintWriter out=response.getWriter();
 
@@ -42,7 +42,7 @@ public class RegisterServlet extends HttpServlet {
             student = operation.select("student_signup", "student_id", student_id);
             if (student!=null){
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert(\"This ID has been registered!\")");
+                out.println("alert(\"这个账户已被注册过!\")");
                 out.println("history.back();");
                 out.println("</script>");
                 return;
@@ -54,12 +54,12 @@ public class RegisterServlet extends HttpServlet {
         //定义向数据库中输入的项目集合
         Object operatingStudent[]={name,password,student_id};
         //向数据库进行insert操作
-        resultSet=operation.exec("INSERT INTO student_signup(name, password, student_id) VALUES (?,?,?)",operatingStudent);
+        operation.exec("INSERT INTO student_signup(name, password, student_id) VALUES (?,?,?)",operatingStudent);
         //检测是否insert成功，如果成功就回到登录前的主页
         try{
             if (operation.select("student_signup","student_id",student_id)!=null){
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert(\"registered successfully!\")");
+                out.println("alert(\"注册成功!\")");
                 out.println("window.location.href=\"index.jsp\"");
                 out.println("</script>");
             }

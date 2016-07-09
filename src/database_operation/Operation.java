@@ -106,4 +106,19 @@ public class Operation {
         return null;
     }
 
+    public boolean is_chosen(int student_id){
+        try{
+            return exec("SELECT * FROM select_course WHERE student_id=" + student_id).next();
+        }catch (SQLException sqlexception){
+            sqlexception.printStackTrace();
+            return true;
+        }
+    }
+
+    public void choose(int s_id,int c_id){
+        String sql =  "insert into select_course(student_id,course_id)values("+s_id+","+c_id+")";
+        exec(sql);
+        close();
+    }
+
 }

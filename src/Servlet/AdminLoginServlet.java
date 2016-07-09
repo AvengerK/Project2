@@ -32,7 +32,7 @@ public class AdminLoginServlet extends HttpServlet {
         String result=operation.checkUser("admin",admin_id,password);
         switch (result){
             case "CORRECT":
-                //如果正确则进入后台管理页面（尚未设计）
+                //如果正确则进入后台管理页面
                 System.out.println("correct");
                 response.sendRedirect("background.jsp");
                 break;
@@ -41,7 +41,7 @@ public class AdminLoginServlet extends HttpServlet {
                 System.out.println("incorrect");
                 out.flush();
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert(\"incorrect password!\");");
+                out.println("alert(\"密码错误\");");
                 out.println("history.back();");
                 out.println("</script>");
                 break;
@@ -50,7 +50,7 @@ public class AdminLoginServlet extends HttpServlet {
                 System.out.println("no such admin");
                 out.flush();
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert(\"no such admin!\");");
+                out.println("alert(\"管理员账户不存在\");");
                 out.println("history.back();");
                 out.println("</script>");
                 break;
