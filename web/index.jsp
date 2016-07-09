@@ -41,9 +41,9 @@
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
             <%--注册按钮--%>
-          <a class="mdl-navigation__link" href="register_new.jsp">注册</a>
+          <a class="mdl-navigation__link" href="register.jsp">注册</a>
             <%--登录按钮--%>
-          <a class="mdl-navigation__link" href="login_new.jsp">登录</a>
+          <a class="mdl-navigation__link" href="login.jsp">登录</a>
 
         </nav>
       </div>
