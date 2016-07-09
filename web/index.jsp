@@ -41,9 +41,9 @@
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
             <%--注册按钮--%>
-          <a name="set" class="mdl-navigation__link" href="register.jsp">注册</a>
+          <a class="mdl-navigation__link" href="register.jsp">注册</a>
             <%--登录按钮--%>
-          <a name="set" class="mdl-navigation__link" href="login.jsp">登录</a>
+          <a class="mdl-navigation__link" href="login.jsp">登录</a>
 
         </nav>
       </div>
@@ -59,7 +59,7 @@
         <%--登录前的主页，报名按钮将不可用--%>
       <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
         <div class="page-content"><!-- Your content goes here -->
-            This is JAVA WEB Class.
+            JAVA WEB实验班
           <!-- Colored FAB button with ripple -->
           <button disabled="disabled" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
             <i class="material-icons">add</i>
@@ -68,7 +68,7 @@
       </section>
       <section class="mdl-layout__tab-panel" id="fixed-tab-2">
         <div class="page-content"><!-- Your content goes here -->
-            This is Embedded System Class.
+            嵌入式实验班
             <button disabled="disabled" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                 <i class="material-icons">add</i>
             </button>
@@ -76,7 +76,7 @@
       </section>
       <section class="mdl-layout__tab-panel" id="fixed-tab-3">
         <div class="page-content"><!-- Your content goes here -->
-            This is picture processing class.
+            图像处理实验班
             <button disabled="disabled" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                 <i class="material-icons">add</i>
             </button>

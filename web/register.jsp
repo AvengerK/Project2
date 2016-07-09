@@ -22,12 +22,12 @@
     <%--注册填写表单：学生姓名，学号，密码--%>
     <%--表单信息提交到registerServlet处理--%>
     <form action="${pageContext.request.contextPath}/Servlet.RegisterServlet" method="post">
-        Name:
+        姓名：
         <input type="text" name="name"/><br>
-        Password:
-        <input type="password" name="password"><br>
-        Student ID:
+        学号：
         <input type="number" name="student_id"><br>
+        密码：
+        <input type="password" name="password"><br>
         <input type="submit" value="submit"/>
     </form>
 

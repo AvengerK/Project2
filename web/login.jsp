@@ -30,12 +30,12 @@
 <%--学生登录信息表单：学号，密码--%>
 <%--提交到LoginServlet实现登录功能--%>
 <form action="${pageContext.request.contextPath}/Servlet.LoginServlet" method="post">
-    student ID:
+    学号：
     <label>
     <input type="number" name="student_id">
     </label>
     <br>
-    Password:
+    密码：
     <label>
     <input type="password" name="password">
     </label>

@@ -12,6 +12,6 @@
     <title>Administration</title>
 </head>
 <body>
-    Hello admin.
+    管理员后台管理页面
 </body>
 </html>

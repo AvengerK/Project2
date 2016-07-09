@@ -15,12 +15,12 @@
 <body>
 <%--管理员登录表单：ID和密码。提交到adminLoginServlet处理--%>
     <form action="${pageContext.request.contextPath}/Servlet.AdminLoginServlet" method="post">
-        Admin ID:
+        管理员ID：
         <label>
             <input type="number" name="admin_id">
         </label>
         <br>
-        Password:
+        密码：
         <label>
             <input type="password" name="password">
         </label>
