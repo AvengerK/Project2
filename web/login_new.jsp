@@ -34,6 +34,9 @@
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.jsp">Home</a>
+        </nav>
     </div>
   </header>
 
