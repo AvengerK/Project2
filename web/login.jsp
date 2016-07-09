@@ -13,9 +13,6 @@
 <html>
 <head>
     <title>Login</title>
-    <script type="text/javascript" src="jquery.js">
-
-    </script>
 </head>
 <body>
 <%

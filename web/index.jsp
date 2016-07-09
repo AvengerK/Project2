@@ -41,7 +41,7 @@
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
             <%--注册按钮--%>
-          <a class="mdl-navigation__link" href="register.jsp">注册</a>
+          <a class="mdl-navigation__link" href="register_new.jsp">注册</a>
             <%--登录按钮--%>
           <a class="mdl-navigation__link" href="login.jsp">登录</a>
 
@@ -68,10 +68,12 @@
       </section>
       <section class="mdl-layout__tab-panel" id="fixed-tab-2">
         <div class="page-content"><!-- Your content goes here -->
+            <div style="top: 10px;" align="center">
             嵌入式实验班
-            <button disabled="disabled" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+            <button style="position: absolute; bottom: 10px; margin: 0; padding: 0;" disabled="disabled" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                 <i class="material-icons">add</i>
             </button>
+            </div>
         </div>
       </section>
       <section class="mdl-layout__tab-panel" id="fixed-tab-3">

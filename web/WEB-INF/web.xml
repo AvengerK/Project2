@@ -39,5 +39,13 @@
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/Servlet.LogoutServlet</url-pattern>
     </servlet-mapping>
-    
+
+    <servlet>
+        <servlet-name>SelectClassServlet</servlet-name>
+        <servlet-class>Servlet.SelectClassServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectClassServlet</servlet-name>
+        <url-pattern>/Servlet.SelectClassServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -68,16 +68,6 @@ public class Operation {
             return null;
         }
 
-//        String temp_id=null;
-//        try {
-//            if (tableName.equals("student_signup")) {
-//                temp_id = resultSet.getString("student_id");
-//            }else if (tableName.equals("admin")){
-//                temp_id = resultSet.getString("admin_id");
-//            }
-//        }catch (SQLException sqlexception){
-//            sqlexception.printStackTrace();
-//        }
         try {
             while (resultSet.next()){
                 String temp_id=null;

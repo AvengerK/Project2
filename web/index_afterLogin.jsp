@@ -63,25 +63,32 @@
             <div class="page-content"><!-- Your content goes here -->
                 JAVA WEB实验班
                 <!-- Colored FAB button with ripple -->
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <form>
+                <button name="class_select" value="1" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                     <i class="material-icons">add</i>
                 </button>
+                    <%--<input type="button" name="class_select" value="1" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">--%>
+                </form>
             </div>
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-2">
             <div class="page-content"><!-- Your content goes here -->
                 嵌入式实验班
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <form>
+                <button name="class_select" value="2" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                     <i class="material-icons">add</i>
                 </button>
+                </form>
             </div>
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-3">
             <div class="page-content"><!-- Your content goes here -->
                 图像处理实验班
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <form>
+                <button name="class_select" value="3" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                     <i class="material-icons">add</i>
                 </button>
+                </form>
             </div>
         </section>
     </main>

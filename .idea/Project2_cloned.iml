@@ -11,16 +11,6 @@
         </webroots>
       </configuration>
     </facet>
-    <facet type="web" name="Web2">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/out/artifacts/Project2_war_exploded/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/out/artifacts/Project2_war_exploded" relative="/" />
-        </webroots>
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/web/WEB-INF/classes" />
@@ -29,6 +19,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/web" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/out/artifacts/Project2_cloned_Web_exploded" />
+      <excludeFolder url="file://$MODULE_DIR$/out/artifacts/Project2_war_exploded" />
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
