@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="91f8a079-5db7-45b5-9243-ae265cb6a7ae" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="Project2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1203,7 +1202,7 @@
       <workItem from="1468053035566" duration="1813000" />
       <workItem from="1468063401563" duration="249000" />
       <workItem from="1468063694107" duration="8169000" />
-      <workItem from="1468074693053" duration="5191000" />
+      <workItem from="1468074693053" duration="5221000" />
     </task>
     <task id="LOCAL-00001" summary="recover the project">
       <created>1467963173799</created>
@@ -1303,11 +1302,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468079788134</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update README">
+      <created>1468079916276</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1468079916276</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117911000" />
+    <option name="totallyTimeSpent" value="117941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1402" extended-state="6" />
@@ -1398,7 +1404,8 @@
     <MESSAGE value="增加主页按钮" />
     <MESSAGE value="Rename files" />
     <MESSAGE value="增加了选课功能！但是不能退课！自己选择的屎，跪着也要吃完！" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了选课功能！但是不能退课！自己选择的屎，跪着也要吃完！" />
+    <MESSAGE value="update README" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
