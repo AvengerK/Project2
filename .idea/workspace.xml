@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91f8a079-5db7-45b5-9243-ae265cb6a7ae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/login_new.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/login.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/adminLogin_new.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/adminLogin.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login_new.jsp" afterPath="$PROJECT_DIR$/web/login_new.jsp" />
     </list>
     <ignored path="Project2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,8 +70,18 @@
       <file leaf-file-name="login_new.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/login_new.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+            <state relative-caret-position="1078">
+              <caret line="58" column="195" selection-start-line="58" selection-start-column="195" selection-end-line="58" selection-end-column="195" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminLogin_new.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/adminLogin_new.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="41" column="126" selection-start-line="41" selection-start-column="126" selection-end-line="41" selection-end-column="126" />
               <folding />
             </state>
           </provider>
@@ -122,6 +132,7 @@
         <option value="$PROJECT_DIR$/web/register.jsp" />
         <option value="$PROJECT_DIR$/web/register_new.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/adminLogin_new.jsp" />
         <option value="$PROJECT_DIR$/web/login_new.jsp" />
       </list>
     </option>
@@ -1132,7 +1143,7 @@
       <workItem from="1468040522026" duration="534000" />
       <workItem from="1468053035566" duration="1813000" />
       <workItem from="1468063401563" duration="249000" />
-      <workItem from="1468063694107" duration="3475000" />
+      <workItem from="1468063694107" duration="3948000" />
     </task>
     <task id="LOCAL-00001" summary="recover the project">
       <created>1467963173799</created>
@@ -1197,11 +1208,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468066407482</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="美化（？）登录页面">
+      <created>1468067419655</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1468067419655</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108026000" />
+    <option name="totallyTimeSpent" value="108499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1402" extended-state="6" />
@@ -1287,7 +1305,8 @@
     <MESSAGE value="修复数据库连接问题" />
     <MESSAGE value="美化注册页面（大概" />
     <MESSAGE value="美化（？）注册页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="美化（？）注册页面" />
+    <MESSAGE value="美化（？）登录页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="美化（？）登录页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1300,13 +1319,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/database_operation/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2256">
-          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1824">
@@ -1631,10 +1643,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/adminLogin_new.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="41" column="126" selection-start-line="41" selection-start-column="126" selection-end-line="41" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/login_new.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        <state relative-caret-position="1078">
+          <caret line="58" column="195" selection-start-line="58" selection-start-column="195" selection-end-line="58" selection-end-column="195" />
           <folding />
         </state>
       </provider>

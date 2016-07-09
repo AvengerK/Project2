@@ -56,7 +56,7 @@
   	<input type="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" value="提交">
 </form>
 
-        <button onclick="window.location.href='adminLogin.jsp';" style="position: absolute; bottom: 10px;right: 10px;">
+        <button onclick="window.location.href='adminLogin_new.jsp';" style="position: absolute; bottom: 10px;right: 10px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Admin
         </button>
     </div>
