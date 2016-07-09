@@ -61,26 +61,31 @@ public class Operation {
 
         ResultSet resultSet;
         try {
-            resultSet=exec("SELECT * FROM"+tableName);
+            resultSet=exec("SELECT * FROM "+tableName);
         }catch (Exception e){
             e.printStackTrace();
             close();
             return null;
         }
 
-        String temp_id=null;
-        try {
-            if (tableName.equals("student_signup")) {
-                temp_id = resultSet.getString("student_id");
-            }else if (tableName.equals("admin")){
-                temp_id = resultSet.getString("admin_id");
-            }
-        }catch (SQLException sqlexception){
-            sqlexception.printStackTrace();
-        }
+//        String temp_id=null;
+//        try {
+//            if (tableName.equals("student_signup")) {
+//                temp_id = resultSet.getString("student_id");
+//            }else if (tableName.equals("admin")){
+//                temp_id = resultSet.getString("admin_id");
+//            }
+//        }catch (SQLException sqlexception){
+//            sqlexception.printStackTrace();
+//        }
         try {
             while (resultSet.next()){
-
+                String temp_id=null;
+                if (tableName.equals("student_signup")) {
+                    temp_id = resultSet.getString("student_id");
+                }else if (tableName.equals("admin")){
+                    temp_id = resultSet.getString("admin_id");
+                }
                 String temp_password=resultSet.getString("password").trim();
                 if (Objects.equals(temp_id, id)){
                     if (password.equals(temp_password)){
