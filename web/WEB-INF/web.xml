@@ -4,6 +4,10 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>Servlet.LoginServlet</servlet-class>
@@ -40,4 +44,12 @@
         <url-pattern>/Servlet.LogoutServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>EditInfoServlet</servlet-name>
+        <servlet-class>Servlet.EditInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditInfoServlet</servlet-name>
+        <url-pattern>/Servlet.EditInfoServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

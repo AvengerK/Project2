@@ -27,7 +27,7 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="index.jsp">Home</a>
+            <a class="mdl-navigation__link" href="login.jsp">登录</a>
         </nav>
     </div>
   </header>

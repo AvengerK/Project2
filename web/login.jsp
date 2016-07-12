@@ -35,7 +35,7 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="index.jsp">Home</a>
+            <a class="mdl-navigation__link" href="register.jsp">注册</a>
         </nav>
     </div>
   </header>

@@ -25,6 +25,8 @@ public class RegisterServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        response.setContentType("text/html;charset=utf-8");
+        response.setCharacterEncoding("UTF-8");
         //从注册页面表单提交的信息获取输入的姓名，学号，密码
         String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"utf-8");
         String password = request.getParameter("password");

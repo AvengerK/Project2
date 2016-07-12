@@ -1,5 +1,10 @@
 <%@ page import="bean.Student" %>
-<%@ page import="database_operation.Operation" %><%--
+<%@ page import="database_operation.Operation" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.SQLException" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.io.PrintWriter" %><%--
   Created by IntelliJ IDEA.
   User: hou
   Date: 2016/7/7
@@ -28,6 +33,7 @@
     //定义字符串name为学生的姓名
     String name = student.getName();
 %>
+
 <!-- Simple header with fixed tabs. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs mdl-layout--no-drawer-button">
@@ -43,8 +49,11 @@
                 <%--<a class="mdl-navigation__link" href="login.jsp">登录</a>--%>
                     <span class="mdl-layout-title"><%=name%>,欢迎!</span>
                     <%--注销操作由servlet实现--%>
-                    <a class="mdl-navigation__link" href="${pageContext.request.contextPath}/Servlet.LogoutServlet">注销</a>
 
+                    <a class="mdl-navigation__link" href="${pageContext.request.contextPath}/Servlet.LogoutServlet">注销</a>
+                    <a class="mdl-navigation__link" href="#" onclick="<%
+                        System.out.println("tui");
+                    %>">退报</a>
             </nav>
         </div>
         <!-- Tabs -->
@@ -54,6 +63,8 @@
             <a href="#fixed-tab-3" class="mdl-layout__tab">图像处理</a>
         </div>
     </header>
+
+
     <%--<div class="mdl-layout__drawer">--%>
     <%--<span class="mdl-layout-title">Title</span>--%>
     <%--</div>--%>
@@ -62,15 +73,22 @@
     <main class="mdl-layout__content">
         <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
             <div class="page-content"><!-- Your content goes here -->
-                JAVA WEB实验班
+                <%
+                    Operation operation=new Operation();
+                    ResultSet resultSet=operation.exec("SELECT info FROM course");
+                    List<String> infoList=new ArrayList<>();
+                    try {
+                        while (resultSet.next()){
+                            infoList.add(resultSet.getString("info"));
+                        }
+                    }catch (SQLException e){
+                        e.printStackTrace();
+                    }
+                %>
+                <%=infoList.get(0)%>
                 <!-- Colored FAB button with ripple -->
                 <form>
-                <button name="class_select" value="1" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
-                        onclick="<%Operation p1 = new Operation();
-                    if(!(p1).is_chosen(student.getStudent_id()))
-                        {
-                            p1.choose(student.getStudent_id(),1);
-                        }else{%> alert('已经报过名了！');<%}%>">
+                <button value="1" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                     <i class="material-icons">add</i>
                 </button>
                     <%--<input type="button" name="class_select" value="1" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">--%>
@@ -79,14 +97,9 @@
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-2">
             <div class="page-content"><!-- Your content goes here -->
-                嵌入式实验班
+                <%=infoList.get(1)%>
                 <form>
-                <button name="class_select" value="2" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
-                        onclick="<%Operation p2 = new Operation();
-                    if(!(p2).is_chosen(student.getStudent_id()))
-                        {
-                            p2.choose(student.getStudent_id(),2);
-                        }else{%> alert('已经报过名了！');<%}%>">
+                <button value="2" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                     <i class="material-icons">add</i>
                 </button>
                 </form>
@@ -94,16 +107,13 @@
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-3">
             <div class="page-content"><!-- Your content goes here -->
-                图像处理实验班
-                <form>
-                <button name="class_select" value="3" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
-                        onclick="<%Operation p3 = new Operation();
-                    if(!(p3).is_chosen(student.getStudent_id()))
-                        {
-                            p3.choose(student.getStudent_id(),3);
-                        }else {%> alert('已经报过名了！')<%}%>">
+                <%=infoList.get(2)%>
+                <form action="" method="post">
+                <button value="3" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                     <i class="material-icons">add</i>
                 </button>
+                    <!-- Flat button with ripple -->
+
                 </form>
             </div>
         </section>

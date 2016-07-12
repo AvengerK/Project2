@@ -10,7 +10,6 @@ import java.util.Objects;
  * Created by hou on 2016/7/6 21:31 21:32.
  */
 public class Operation {
-
     private Connection connection = null;
 
     //加载数据库的方法
@@ -121,4 +120,9 @@ public class Operation {
         close();
     }
 
+    public void quit(int student_id){
+        String sql="DELETE FROM select_course WHERE student_id="+student_id;
+        exec(sql);
+        close();
+    }
 }
