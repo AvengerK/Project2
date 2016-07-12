@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
                 }
                 //如果正确，最后重定向到index。因为index有检测session是否存在student对象的代码
                 //所以如果登录成功，则会再被转发到登录后的界面。
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("ChooseClass.jsp");
 //                request.getRequestDispatcher("index.jsp").forward(request,response);
 
                 break;

@@ -52,4 +52,13 @@
         <servlet-name>EditInfoServlet</servlet-name>
         <url-pattern>/Servlet.EditInfoServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChooseServlet</servlet-name>
+        <servlet-class>Servlet.ChooseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChooseServlet</servlet-name>
+        <url-pattern>/Servlet.ChooseServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

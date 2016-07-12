@@ -27,7 +27,7 @@ public class LogoutServlet extends HttpServlet {
         response.setHeader("Pragma", "No-cache");
         response.setHeader("Cache-Control", "no-cache");
         response.setDateHeader("Expires", 0);
-        //重定向到未登录时的主页
+
         response.sendRedirect("login.jsp");
         System.out.println("logout");
     }

@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Project2_cloned
@@ -23,6 +27,13 @@ public class EditInfoServlet extends HttpServlet {
         String javaWebInfo=new String(request.getParameter("java_web_info").getBytes("ISO_8859-1"),"utf-8");
         String embeddedInfo=new String(request.getParameter("embedded_info").getBytes("ISO_8859-1"),"utf-8");
         String pictureInfo=new String(request.getParameter("picture_info").getBytes("ISO_8859-1"),"utf-8");
+        System.out.println(request.getParameter("date"));
+        DateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            java.util.Date date = dateFormat.parse(request.getParameter("date"));
+        }catch (ParseException e){
+            e.printStackTrace();
+        }
         Operation operation=new Operation();
         System.out.println(javaWebInfo);
         System.out.println(embeddedInfo);

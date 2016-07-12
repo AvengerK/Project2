@@ -70,14 +70,21 @@
             <div class="page-content"><!-- Your content goes here -->
                 <!-- Floating Multiline Textfield -->
                 <form action="${pageContext.request.contextPath}/Servlet.EditInfoServlet" method="post">
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <textarea class="mdl-textfield__input" rows= "10" id="java_web_info" name="java_web_info" style="float: left"></textarea>
+                    <div class="mdl-textfield mdl-js-textfield" style="float: left">
+                        <div>
+                        <textarea class="mdl-textfield__input" rows= "10" id="java_web_info" name="java_web_info"></textarea>
                         <label class="mdl-textfield__label" for="java_web_info">JAVA WEB 课程介绍</label>
-                        <textarea style="float: left" class="mdl-textfield__input" rows= "10" id="embedded_info" name="embedded_info" ></textarea>
+                        </div>
+                        <div>
+                            <textarea class="mdl-textfield__input" rows= "10" id="embedded_info" name="embedded_info" ></textarea>
                         <label class="mdl-textfield__label" for="embedded_info">嵌入式课程介绍</label>
-                        <textarea style="float: left" class="mdl-textfield__input" rows= "10" id="picture_info" name="picture_info" ></textarea>
+                        </div>
+                        <div>
+                            <textarea class="mdl-textfield__input" rows= "10" id="picture_info" name="picture_info" ></textarea>
                         <label class="mdl-textfield__label" for="picture_info">图像处理课程介绍</label>
+                        </div>
                     </div>
+                    <input type="date" name="date" style="float: left">
                     <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" value="提交">
                 </form>
 
